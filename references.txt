@@ -1,0 +1,3 @@
+Splay Tree is from: https://gist.github.com/Plutor/3615362
+Binary Search Tree is from: http://code.activestate.com/recipes/577540-python-binary-search-tree/
+Helped to explain Optimal Binary Search Trees, and generated examples for Optimal Binary Search Trees, which were used for debugging:  http://www.cs.man.ac.uk/~graham/COMP20012/dynamic/optbintree/
