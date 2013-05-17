@@ -39,22 +39,23 @@ class Testing(unittest.TestCase):
         self.splayTree.find(2)
         self.assertEquals(self.splayTree.root.val,2)
     def testOptimalBinarySearchTree0(self):
-        numberOfAccessesDictionary = {1:1,2:3,3:5,4:2,5:3,6:1}
+        numberOfAccessesDictionary = {12:1,13:3,14:5,15:2,18:3,25:1}
         self.optimalBinarySearchTree = optimalBinarySearchTree.OptimalBinarySearchTree(numberOfAccessesDictionary)
-        self.assertEquals(self.optimalBinarySearchTree._root[2], 2)
-        self.assertEquals(self.optimalBinarySearchTree._root[0][2], 1)
-        self.assertEquals(self.optimalBinarySearchTree._root[0][0][2], 0)
-        self.assertEquals(self.optimalBinarySearchTree._root[1][2], 4)
-        self.assertEquals(self.optimalBinarySearchTree._root[1][1][2], 5)
-        self.assertEquals(self.optimalBinarySearchTree._root[1][0][2], 3)
+        #print self.optimalBinarySearchTree.pprint()
+        self.assertEquals(self.optimalBinarySearchTree._root[2], 14)
+        self.assertEquals(self.optimalBinarySearchTree._root[0][2], 13)
+        self.assertEquals(self.optimalBinarySearchTree._root[0][0][2], 12)
+        self.assertEquals(self.optimalBinarySearchTree._root[1][2], 18)
+        self.assertEquals(self.optimalBinarySearchTree._root[1][1][2], 25)
+        self.assertEquals(self.optimalBinarySearchTree._root[1][0][2], 15)
     def testOptimalBinarySearchTree1(self):
         numberOfAccessesDictionary = {1:30,2:5,3:8,4:45,5:12}
         self.optimalBinarySearchTree = optimalBinarySearchTree.OptimalBinarySearchTree(numberOfAccessesDictionary)
-        self.assertEquals(self.optimalBinarySearchTree._root[2], 3)
-        self.assertEquals(self.optimalBinarySearchTree._root[0][2], 0)
-        self.assertEquals(self.optimalBinarySearchTree._root[0][1][2], 2)
-        self.assertEquals(self.optimalBinarySearchTree._root[0][1][0][2], 1)
-        self.assertEquals(self.optimalBinarySearchTree._root[1][2], 4)
+        self.assertEquals(self.optimalBinarySearchTree._root[2], 4)
+        self.assertEquals(self.optimalBinarySearchTree._root[0][2], 1)
+        self.assertEquals(self.optimalBinarySearchTree._root[0][1][2], 3)
+        self.assertEquals(self.optimalBinarySearchTree._root[0][1][0][2], 2)
+        self.assertEquals(self.optimalBinarySearchTree._root[1][2], 5)
 
 if __name__ == "__main__":
     unittest.main()

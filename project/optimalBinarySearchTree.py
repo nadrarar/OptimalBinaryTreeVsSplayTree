@@ -28,7 +28,7 @@ class OptimalBinarySearchTree(binarySearchTree.BinarySearchTree):
         print "matr d "+str(matrixDiagonal)
         """
         for d in self.determineTreeList():
-            self.insert(d)
+            self.insert(self.accessFrequencies[d][0])
     def recursiveDetermineTreeList(self,left,right,list):
         indexRoot = int(self.treeRootsMatrix[left][right])
         list.append(indexRoot)
